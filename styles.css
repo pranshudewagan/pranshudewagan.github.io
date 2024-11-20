@@ -1,176 +1,213 @@
-/* General Styling */
+/* General Styles */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Basic Layout */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
-    color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* Navigation Bar */
 header {
-    background-color: #e53935;  /* Red background */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #333;
     color: white;
-    font-size: 1.2em;
 }
 
-h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 10px;
+#hero h1 {
+    font-size: 3rem;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+#hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
 }
 
-/* About Section Styles */
+/* About Me Section */
 #about {
-    padding: 20px;
-    margin: 20px;
+    padding: 2rem 2rem;
     background-color: #fff;
-    border-radius: 8px;
-}
-
-#about h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-#about p {
-    font-size: 1.1em;
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    gap: 20px; /* space between the image and text */
+    justify-content: center;
+    gap: 20px;
 }
 
 .about-img {
     border-radius: 50%;
-    width: 150px; /* Adjust the size of the image */
+    width: 150px;
     height: 150px;
-    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    object-fit: cover;
 }
 
-/* Projects Section Styles */
+/* Resume Section */
+#resume {
+    padding: 2rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#resume h2 {
+    margin-bottom: 10px;
+}
+
+#resume p {
+    margin-bottom: 20px;
+}
+
+/* Button Style */
+.contact-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #45a049;
+}
+
+/* Projects Section */
 #projects {
-    padding: 20px;
-    margin: 20px;
+    padding: 2rem 2rem;
     background-color: #fff;
-    border-radius: 8px;
+    text-align: center;
 }
 
 #projects h2 {
-    font-size: 2em;
     margin-bottom: 10px;
 }
 
 #projects ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 #projects ul li {
-    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
-/* Contact Section Styling */
+#projects ul li a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+#projects ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
 #contact {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
+    padding: 2rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
 #contact h2 {
-    font-size: 2em;
     margin-bottom: 10px;
 }
 
-#contact p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-}
-
-/* Button-style Contact Links */
-.contact-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 20px;
-    margin-right: 15px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #e53935;  /* Red background */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.contact-btn i {
-    margin-right: 10px;
-}
-
-/* Hover effect for button-style links */
-.contact-btn:hover {
-    background-color: #c62828;  /* Darker red on hover */
-    color: #fff;  /* White text on hover */
-}
-
-/* Flexbox layout for buttons */
 .contact-links {
     display: flex;
-    flex-wrap: wrap; /* Allow the buttons to wrap when needed */
-    gap: 20px; /* Ensure there is space between the buttons */
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Media Query for Mobile Devices */
-@media (max-width: 768px) {
-    .contact-links {
-        justify-content: center; /* Center buttons on smaller screens */
-    }
-    
-    .contact-btn {
-        flex: 1 1 100%; /* Make each button take full width on small screens */
-        text-align: center; /* Center the text within the button */
-        margin-right: 0; /* Remove margin-right for full-width buttons */
-    }
+.contact-links a {
+    display: inline-block;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #e53935;  /* Red background */
-    color: white;
     text-align: center;
-    padding: 10px;
-    position: relative; /* Use relative positioning */
-    bottom: 0; /* Align it at the bottom */
-    width: 100%;
-    margin-top: auto; /* Push footer to bottom when content is short! */
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Modal Styles */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content (the box itself) */
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%; /* Set width to 80% of the viewport */
+    max-height: 80%; /* Max height */
+    overflow-y: auto; /* Scroll if needed */
+    background-color: white;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
