@@ -169,7 +169,8 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative; /* Use relative positioning */
+    bottom: 0; /* Align it at the bottom */
     width: 100%;
-    bottom: 0;
+    margin-top: auto; /* Push footer to bottom when content is short */
 }
