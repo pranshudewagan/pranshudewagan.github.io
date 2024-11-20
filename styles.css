@@ -1,21 +1,26 @@
-/* Global Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #3aafa9;  /* Green shade */
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -25,28 +30,17 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-    font-size: 18px;
-}
-
-/* Hero Section */
-#hero {
-    background-color: #e53935;  /* Red shade */
-    color: #fff;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-#hero h1 {
-    font-size: 3em;
-}
-
-#hero p {
+    color: white;
     font-size: 1.2em;
 }
 
-/* Section Styles */
+h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
 section {
     padding: 20px;
     margin: 20px;
@@ -54,27 +48,57 @@ section {
     border-radius: 8px;
 }
 
-section h2 {
+/* About Section Styles */
+#about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#about h2 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
-section p {
+#about p {
     font-size: 1.1em;
 }
 
-ul {
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* space between the image and text */
+}
+
+.about-img {
+    border-radius: 50%;
+    width: 150px; /* Adjust the size of the image */
+    height: 150px;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+/* Projects Section Styles */
+#projects {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+#projects h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#projects ul {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+#projects ul li {
+    font-size: 1.1em;
     margin-bottom: 10px;
-}
-
-ul li a {
-    color: #e53935;  /* Red shade for links */
-    text-decoration: none;
 }
 
 /* Contact Section Styling */
@@ -119,15 +143,33 @@ ul li a {
     color: #fff;  /* White text on hover */
 }
 
+/* Flexbox layout for buttons */
+.contact-links {
+    display: flex;
+    flex-wrap: wrap; /* Allow the buttons to wrap when needed */
+    gap: 20px; /* Ensure there is space between the buttons */
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    .contact-links {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+    
+    .contact-btn {
+        flex: 1 1 100%; /* Make each button take full width on small screens */
+        text-align: center; /* Center the text within the button */
+        margin-right: 0; /* Remove margin-right for full-width buttons */
+    }
+}
+
 /* Footer Styles */
 footer {
+    background-color: #3aafa9;
+    color: white;
     text-align: center;
-    background-color: #333;
-    color: #fff;
     padding: 10px;
-    position: relative;
+    position: fixed;
     width: 100%;
-    margin-top: 20px;
     bottom: 0;
-    clear: both;
 }
