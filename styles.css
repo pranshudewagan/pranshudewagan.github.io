@@ -172,5 +172,5 @@ footer {
     position: relative; /* Use relative positioning */
     bottom: 0; /* Align it at the bottom */
     width: 100%;
-    margin-top: auto; /* Push footer to bottom when content is short */
+    margin-top: auto; /* Push footer to bottom when content is short! */
 }
